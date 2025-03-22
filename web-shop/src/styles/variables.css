@@ -1,0 +1,3 @@
+:root {
+  --wrapper-width: min(1168px, 100% - 2rem);
+}
