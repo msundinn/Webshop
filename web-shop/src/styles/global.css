@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.debug {
+  outline: 2px solid lime;
+  background: hsl(0 100% 50% / 0.1);
+}
+
+.wrapper {
+  width: min(1268px, 100% - 1rem);
+  margin-inline: auto;
+  margin-block: 5rem;
+  min-height: 100vh;
+}
