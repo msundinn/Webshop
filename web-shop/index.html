@@ -1,13 +1,102 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <script type="module" src="/src/main.ts" defer></script>
+    <title>Bokhandel</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <header class="page-header">
+      <nav class="main-nav">
+        <div class="logo-container">
+          <h2>Bokhandel</h2>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Böcker</a></li>
+          <li><a href="#footer">Kontakt</a></li>
+        </ul>
+        <button popovertarget="shopping-cart">
+          <div class="cart-notification"></div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+            <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+            <path d="M17 17h-11v-14h-2" />
+            <path d="M6 5l14 1l-1 7h-13" />
+          </svg>
+        </button>
+        <div popover class="shopping-cart" id="shopping-cart">
+          <button class="close-cart">&#10005;</button>
+          <ul class="shopping-cart-list"></ul>
+          <footer class="shopping-cart-footer">
+            <button class="clear-cart-btn">ta bort allt</button>
+            <div class="free-shipping-progress-container">
+              <p class="progress-message">X kvar till fri frakt</p>
+              <div class="outer">
+                <div class="inner"></div>
+              </div>
+            </div>
+            <p class="shopping-cart-total"></p>
+            <button
+              class="go-to-payment-btn"
+              onclick="location.href='kassasida.html'"
+            >
+              Till kassan
+            </button>
+      </nav>
+    </header>
+    <main class="wrapper">
+    <div class="hero">
+      <div class="hero-text">
+        <h1>Böcker online</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere quos labore, aspernatur ipsam mollitia voluptas dolore quam exercitationem. Itaque perferendis esse libero earum dicta accusantium nobis repellendus laboriosam at totam.</p>
+      </div>
+      <div class="hero-img">
+        <img src="" alt="Bild på böcker">
+      </div>
+      <section class="product-section">
+        <h2>Senaste</h2>
+        <ul class="product-list"></ul>
+      </section>
+    </main>
+    <footer id="footer">
+      <section class="footer-container">
+        <div class="footer-section">
+          <h3>Tales & Tails</h3>
+          <p>Om oss</p>
+          <p>Kundservice</p>
+          <p>Valiga frågor</p>
+        </div>
+        <div class="footer-section">
+          <h3>Nyhetsbrev</h3>
+          <input
+            type="email"
+            id="email-input"
+            placeholder="Din e-post adress"
+          />
+          <button id="subscribe-button">Anmäl dig</button>
+        </div>
+        <div class="footer-section">
+          <h3>Kontakt</h3>
+          <p>
+            Gustavslundsvägen 151 D <br />
+            167 51 Bromma<br />+46 123 345 67 88
+          </p>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>
