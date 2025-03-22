@@ -1,3 +1,5 @@
 :root {
   --wrapper-width: min(1168px, 100% - 2rem);
+  --header-height: 120px;
+  font-family: Arial, Helvetica, sans-serif;
 }
